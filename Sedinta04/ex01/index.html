@@ -6,8 +6,17 @@
 </head>
 <body>
 
-    <script>
+    <p id="message"></p>
 
+    <script>
+        var value = window.prompt();
+            mesaj = document.getElementById('message');
+
+        if(value%2 === 0){
+            mesaj.innerText = 'Valoarea este: ' + value + ' si este para.';
+        } else {
+            mesaj.innerText = 'Valoarea este: ' + value + ' si este impara.';
+        }
     </script>
 </body>
 </html>
