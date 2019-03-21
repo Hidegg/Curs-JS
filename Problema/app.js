@@ -31,9 +31,12 @@ var person = {
   }
   
   var i = 0,
-    j = 0,
-    length = person.friends.length,
-    friendString = '';
+      j = 0,
+      length = person.friends.length,
+      friendString = '',
+      index1 = 1, 
+      index2 = 2,
+      aux = 0;
   
   for (i = 0; i < length; i++) {
     j = 0;
@@ -43,30 +46,38 @@ var person = {
     friendString = 'Am ' + (length - 1) + ' prieteni: ';
 
     for (; j < length; j++) {
-      var index1 = 1, index2 = 2 ;
-      
-    if (j >= innerHeight ) {
-        index1 = 2;
-        index2 = 3;
-    }
+          index1 = 1; 
+          index2 = 2;
 
-    if (person.friends[j].name === person.friends[i].name) {
+    if (j === i) {
         continue;
     } 
 
-      friendString += person.friends[j].name;
-
-
+    friendString += person.friends[j].name;
+    
+    if (i === length - 1 || i === length - 2){
+        j++;
+    }
+    if (j === length){
+        friendString += '.';
+        continue;
+    }
     if (j === length - index1) {
         friendString += '.';
         continue;
       }
-  
     if (j === length - index2) {
         friendString += ' si ';
       } else {
         friendString += ', ';
       }
+    if (j >= i) {
+        index1 = 2;
+        index2 = 3;
+    }
+    if (i === length - 1 || i === length - 2){
+      j--;
+    }
     }
     console.log(friendString);
   };
