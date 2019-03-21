@@ -3,7 +3,7 @@ var person = {
     surname: 'Iordache',
     age: 32,
     petOwner: false,
-    skills: ['html', 'javaScript', 'css', 'java', 'c++', 'node', 'jquery'],
+    skills: ['html', 'javascript', 'css', 'java', 'c++', 'node', 'jquery'],
     friends: [{
         name: 'Larry',
         surname: 'Larryson',
@@ -19,40 +19,53 @@ var person = {
     }]
 };
 
-for (i = 0; i <= person.skills.length - 1; i++){
-    if (person.skills[i].includes('j') === false){
-        console.log(person.skills[i]);
-    }
-};
+var i = 0;
+    skillsLength = person.skills.length - 1;
 
-for (i = -1; i <= person.friends.length - 1; i++){
-    if(i === -1){
-    console.log('Prietenii mei se numesc ');
-    } else {
-        console.log(person.friends[i].name + ' ' + person.friends[i].surname);
-    }
-};
-
-var allAge = 0;
-    allbirthYear = 0;
-
-for(i = 0; i <= person.friends.length - 1; i++){
-    allAge += person.friends[i].age; 
-};
-
-console.log(allAge);
-
-
-for(i = 0; i <= person.friends.length - 1; i++){
-    allbirthYear += (2019 - person.friends[i].age);
-};
-
-console.log(allbirthYear);
-
-for(i = 0; i <= person.friends.length - 1; i++){
-    console.log('Intre ' + person.name + ' si ' + person.friends[i].name + ' este o diferenta de ' + (person.age - person.friends[i].age) + ' ani.');
-};
-
-for(i = person.skills.length - 1; i >= 0; i--){
+for (; i <= skillsLength; i += 1){
     console.log(person.skills[i]);
 }
+
+console.log('*****************');
+
+for (i = 0; i <= skillsLength; i += 1){
+    if(person.skills[i].startsWi
+        ('j') === true){
+        continue;
+    }
+    console.log(person.skills[i]);
+}
+
+console.log('*****************');
+
+var friendsName = 'Prietenii mei se numesc',
+    friendsAge = 0,
+    friendsBirth = 0;
+
+
+for (i = 0; i < person.friends.length; i += 1){
+    friendsName += ' ' + person.friends[i].name + ' ' + person.friends[i].surname;
+    if(i === person.friends.length - 1){
+        friendsName += '.';
+    } else {
+        friendsName += ',';
+    }
+    friendsAge += person.friends[i].age;
+    friendsBirth += 2019 - person.friends[i].age;
+    console.log('Intre ' + person.name + ' si ' + person.friends[i].name + ' este o diferenta de ' + (person.age - person.friends[i].age) + ' ani.');
+}
+
+console.log('*****************');
+console.log(friendsName);
+console.log('*****************');
+console.log(friendsAge);
+console.log('*****************');
+console.log(friendsBirth);
+console.log('*****************');
+
+for (i = skillsLength; i >= 0; i -= 1) {
+    console.log(person.skills[i]);
+}
+
+console.log('*****************');
+
