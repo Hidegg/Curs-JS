@@ -43,7 +43,7 @@ var person = {
     addElement('Sunt ' + person.friends[i].name + ' si acum invat JavaScript.');
     addElement(person.friends[i].name + ' ' + person.friends[i].surname + ' ' + person.friends[i].age);
   
-    friendString = 'Am ' + (length - 1) + ' prieteni: ';
+    friendString = 'Ma numesc ' + person.friends[i].name + ' si am ' + (length - 1) + ' prieteni: ';
 
     for (; j < length; j++) {
           index1 = 1; 
