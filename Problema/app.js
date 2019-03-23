@@ -12,14 +12,6 @@ var person = {
       name: 'Phteven',
       surname: 'Phtevenson',
       age: 31
-    }, {
-      name: 'Carol',
-      surname: 'Carolson',
-      age: 29
-    }, {
-      name: 'Andra',
-      surname: '',
-      age: 29
     }]
   };
   
@@ -42,9 +34,19 @@ var person = {
     j = 0;
     addElement('Sunt ' + person.friends[i].name + ' si acum invat JavaScript.');
     addElement(person.friends[i].name + ' ' + person.friends[i].surname + ' ' + person.friends[i].age);
-  
-    friendString = 'Ma numesc ' + person.friends[i].name + ' si am ' + (length - 1) + ' prieteni: ';
-
+    
+    if (length === 2) {
+      friendString = 'Am un singur prieten: ' + person.friends[i].name + '.';
+      console.log(friendString);
+      continue;
+    } else if (length === 1) {
+      friendString += 'Nu am niciun prieten.'
+      console.log(friendString);
+      break;
+    } else {
+      friendString = 'Ma numesc ' + person.friends[i].name + ' si am ' + (length - 1) + ' prieteni: ';
+    }
+    
     for (; j < length; j++) {
           index1 = 1; 
           index2 = 2;
