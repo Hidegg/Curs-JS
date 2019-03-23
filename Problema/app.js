@@ -1,16 +1,24 @@
 var person = {
-    name: 'Dragos',
-    surname: 'Iordache',
+    name: 'Vlad',
+    surname: 'Baltaretu',
     age: 32,
     petOwner: false,
     skills: ['html', 'javascript', 'css'],
     friends: [{
-      name: 'Larry',
-      surname: 'Larryson',
+      name: 'Hideg',
+      surname: 'Alexandru',
       age: 30
     }, {
-      name: 'Phteven',
-      surname: 'Phtevenson',
+      name: 'Pirvu',
+      surname: 'Dragos',
+      age: 31
+    }, {
+      name: 'Mincu',
+      surname: 'Daniel',
+      age: 31
+    }, {
+      name: 'Nicolae',
+      surname: 'Victor',
       age: 31
     }]
   };
@@ -36,11 +44,13 @@ var person = {
     addElement(person.friends[i].name + ' ' + person.friends[i].surname + ' ' + person.friends[i].age);
     
     if (length === 2) {
-      friendString = 'Am un singur prieten: ' + person.friends[i].name + '.';
+      friendString = 'Ma numesc ' + person.friends[i].name + ' si am un singur prieten: ' + person.friends[i + 1].name + '.';
       console.log(friendString);
-      continue;
+      friendString = 'Ma numesc ' + person.friends[i + 1].name + ' si am un singur prieten: ' + person.friends[i].name + '.';
+      console.log(friendString);
+      break;
     } else if (length === 1) {
-      friendString += 'Nu am niciun prieten.'
+      friendString += 'Ma numesc ' + person.friends[i].name + ' si nu am niciun prieten.'
       console.log(friendString);
       break;
     } else {
