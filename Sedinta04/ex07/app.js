@@ -19,3 +19,18 @@ var friends = [{
         surname: 'Andrason',
         friends: {}
 }];
+
+var nameLength = 0;
+
+for (i = 0; i < friends.length; i++){
+
+    nameLength = friends[i].surname.length + friends[i].name.length;
+
+    if (friends[i].surname === 'Stevenson'){
+        continue;
+    }
+
+    if(nameLength >= 13){
+        console.log(friends[i].name + ' ' + friends[i].surname);
+    }
+}
