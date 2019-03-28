@@ -38,12 +38,15 @@ var inputlimbasiLiteraturaRomana = document.getElementById('limbasiLiteraturaRom
       tic = inputtic.value || 0,
       antreprenoriala = inputantreprenoriala.value || 0,
 
-      result = 0;
-      result = (parseFloat(limbasiLiteraturaRomana) + parseFloat(franceza) + parseFloat(engleza) + parseFloat(matematica) + parseFloat(fizica) + parseFloat(chimie) + parseFloat(biologie) + parseFloat(istoria) + parseFloat(geografia) + parseFloat(stiinteSocioUmane) + parseFloat(religie) + parseFloat(educatieMuzicala) +parseFloat(educatiePlastica) + parseFloat(sport) + parseFloat(informatica) + parseFloat(tic) + parseFloat(antreprenoriala)) / 17
-      if (result > 8.5)
-      alert ('Felicitari, ati obtinut medie de buresa!')
+      result = (parseFloat(limbasiLiteraturaRomana) + parseFloat(franceza) + parseFloat(engleza) + parseFloat(matematica) + parseFloat(fizica) + parseFloat(chimie) + parseFloat(biologie) + parseFloat(istoria) + parseFloat(geografia) + parseFloat(stiinteSocioUmane) + parseFloat(religie) + parseFloat(educatieMuzicala) +parseFloat(educatiePlastica) + parseFloat(sport) + parseFloat(informatica) + parseFloat(tic) + parseFloat(antreprenoriala)) / 17;
 
-      elementResult.innerText =result;
+      result = result.toFixed(2);
+
+      if (result > 8.5) {
+        alert ('Felicitari, ati obtinut medie de bursa!');
+      }
+
+      elementResult.innerText = result;
 
       e.preventDefault();
     }, false);
