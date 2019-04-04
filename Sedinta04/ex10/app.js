@@ -64,8 +64,10 @@ person.friends.forEach(function (friendAge){
     console.log('Diferenta dintre ' + person.name + ' si ' + friendAge.name + ' este de ' + (persAge - friendAge.age) + '.');
 });
 
+console.log('----------------------------');
+
 let skillReverse = 0;
-skillReverse = person.skills.reverse;
+skillReverse = person.skills.reverse();
 
 skillReverse.forEach(function (skill){
     console.log(skill);
