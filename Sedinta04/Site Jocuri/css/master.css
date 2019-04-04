@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav.navbar{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+}
+
+nav.navbar ul{
+    list-style: none;
+    float: right;
+}
+
+nav.navbar ul li{
+    color: #fff;
+    display: inline-block;
+}
+
+nav.navbar ul li a{
+    text-decoration: none;
+}
