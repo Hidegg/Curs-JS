@@ -1,17 +1,31 @@
 div.margin {
-margin: 0 auto;
+    margin: 0 auto;
 }
+
 div.flex{
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
 }
+x
 .dice{
     background: white;
     border: 1px black solid;
     border-radius: 7px;
     padding: 20px;
-    margin: 0 auto;
     width: 50px;
+    text-align: center;
+}
+
+input{
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 10px !important;
+}
+
+div.answer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     text-align: center;
 }
