@@ -1,3 +1,5 @@
+/*NAVBAR*/
+
 *{
     box-sizing: border-box;
 }
@@ -5,10 +7,11 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav.navbar{
-    background-color: #000;
+    background-color: #C1D5DB;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -17,14 +20,13 @@ nav.navbar{
 
 nav.navbar ul{
     list-style: none;
-    float: right;
+    text-align: center;
 }
 
 nav.navbar ul li{
-    color: #fff;
+    color: #FCEEE3;
     display: inline-block;
+    text-align: center;
 }
 
-nav.navbar ul li a{
-    text-decoration: none;
-}
+

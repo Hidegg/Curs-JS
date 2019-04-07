@@ -6,25 +6,29 @@ var randomNumber = Math.floor(Math.random() * 101),
 var i = 0,
     maxTries = 0;
 
-    form.addEventListener('submit', function(e) {
-        var userNumberValue = parseInt(userNumber.value);
-        for(i = 0; i <= maxTries; i++){
-        
-        if(i === maxTries){
-            break;
-            }
-        if(randomNumber === userNumberValue){
-            answer.innerText = 'Ai ghicit! Numarul era ' + userNumberValue + '.';
-        }
-        if(randomNumber > userNumberValue){
-            answer.innerText = 'Numarul e prea mic.';
-        }
-        if(randomNumber < userNumberValue){
-            answer.innerText = 'Numarul e prea mare.';
-        }
+    function add(){
+        maxTries += 1;
     }
-    e.preventDefault();
-    }, false);
+    
+        form.addEventListener('submit', function(e) {
+            var userNumberValue = parseInt(userNumber.value);
+
+            if(randomNumber !== userNumberValue){
+                if(randomNumber > userNumberValue){
+                    answer.innerText = 'Numarul e prea mic.';
+                }
+                if(randomNumber < userNumberValue){
+                    answer.innerText = 'Numarul e prea mare.';
+                }
+            }
+            if(randomNumber === userNumberValue){
+                answer.innerText = 'Ai ghicit! Numarul era ' + userNumberValue + '.';
+            }
+
+            add();
+        e.preventDefault();
+        return maxTries += 1;
+        }, false);
 
 
 

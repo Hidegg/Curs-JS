@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/dices.css">
     <title>Starting Page</title>
 </head>
 <body>
     
-    <!--NAVBAR-->
+    <!-- NAVBAR-->
     <nav class="navbar">
         <ul>
             <li>
@@ -18,20 +18,19 @@
             </li>
         </ul>
     </nav>
-    <!--NAVBAR END-->
+    <!--NAVBAR END -->
 
-    <!--HEADER-->
-    <div class="boverlay">
-        <div class="card">
-            <a href="dices.html"><img src="pictures/joc1" alt="joc1"></a>
-            <h3>Dices</h3>
+    <div class="margin" style="margin-top: 100px;">
+        <div class="flex">
+            <div id="dice1" class="dice">0</div>
+            <div id="dice2" class="dice">0</div>
         </div>
-        <div class="card">
-            <a href="number.html"><img src="pictures/joc2.png" alt="joc2"></a> 
-            <h3>Number Guessing</h3>
-        </div>
-    </div> 
-    <!--HEADER END-->    
+    <button onclick="rollDice()">Roll Dice</button>
+    <h2 id="status" style="clear:left;"></h2>    
+    </div>
 
+    <script src="js/dices.js"></script>
+
+    
 </body>
 </html>

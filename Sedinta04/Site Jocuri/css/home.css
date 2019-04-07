@@ -1,0 +1,42 @@
+/*HEADER*/
+
+.boverlay{
+    background-color: #658DA7;
+    height: 400px;
+    width: 100vw;
+    z-index: 999;
+}
+
+div.boverlay {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div.card{
+    text-align: center;
+    margin-top: 100px;
+    color: #FCEEE3;
+}
+
+div.card a{
+    text-decoration: none;
+    color: #FCEEE3;
+    font-size: 18px;
+} 
+
+div.card a img{
+    padding: 0;
+}
+
+div.card a img:hover {
+    width: 250px;
+    height: 250px;
+    padding: 0;
+}
+
+div img {
+    margin: 0 105px 0;
+    border: 1px solid black;
+    border-radius: 100%;
+}

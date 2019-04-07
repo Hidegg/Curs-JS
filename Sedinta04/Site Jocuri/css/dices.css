@@ -1,0 +1,17 @@
+div.margin {
+margin: 0 auto;
+}
+div.flex{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.dice{
+    background: white;
+    border: 1px black solid;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 50px;
+    text-align: center;
+}
