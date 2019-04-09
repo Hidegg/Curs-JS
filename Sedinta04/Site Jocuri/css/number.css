@@ -1,3 +1,20 @@
 div.game {
-    margin-top: 70px;
+    margin-top: 80px;
+}
+form{
+    text-align: center;
+    margin: 0 auto;
+}
+
+button{
+    margin-top: 10px;
+    border: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    cursor: pointer;
+}
+
+input{
+    text-align: center;
 }
