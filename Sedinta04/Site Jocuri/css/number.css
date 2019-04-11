@@ -37,3 +37,8 @@ button{
 br{
     height: 0;
 }
+
+input:active,
+input:focus{
+    outline: none;
+}

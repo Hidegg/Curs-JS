@@ -43,15 +43,12 @@ var i = 0,
             
         if(randomNumber === userNumberValue){
             answer.innerText = x;
+            userNumber.disabled = true;
         }
             tries++;
         
             userNumber.value = ' ';
-
-        if(tries <= maxTries && answer.value === x) {
-            answer.innerHTML = 'You Won';
-            userNumber.disabled = true;
-        } else if(tries > maxTries) {
+        if(tries > maxTries) {
             answer.innerHTML = 'You Lost!';
             userNumber.disabled = true;
         }
@@ -63,5 +60,3 @@ var i = 0,
 
     e.preventDefault();
     }, false);
-
-//maxTries 10 + dificultate 15/20 tries + button Reset.
