@@ -58,5 +58,9 @@ var i = 0,
             userTries.innerText = 'Incercari ramase ' + (maxTries + userTry) + '.';
             userTry--;
 
+        if(userTry === 0){
+            userTries.innerText.style.displat = 'none';
+        }
+
     e.preventDefault();
     }, false);
