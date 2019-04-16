@@ -7,8 +7,7 @@ function calculateSurface(L, l, h){
         case 2:
             return l * L;
         case 3:
-            x = 2 * (L * l + L * h + h * l);
-            return x;
+            return  2 * (L * l + L * h + h * l);;
     }
 }
 

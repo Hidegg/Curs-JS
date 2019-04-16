@@ -12,14 +12,10 @@ var i = 0,
     repeatArr = [],
     userTry = 0;
 
-
-    difficultyButtons.forEach(function(button){
-        button.addEventListener('click', function() {
-            maxTries = parseInt(this.id);
-            userNumber.disabled = false;
-            answer.innerHTML = ' ';
-        });        
-    });
+    const resetGame = () => {
+        userTry = 0;
+        doNotRepeat();
+    };
 
     const doNotRepeat = () => {
         if(repeatArr.includes(randomNumber)){
@@ -28,18 +24,23 @@ var i = 0,
         repeatArr.push(randomNumber);
     }
 
-    doNotRepeat();
-
-    console.log('**********************');
-
-    console.log(repeatArr);
-
-    console.log
+    difficultyButtons.forEach(function(button){
+        button.addEventListener('click', function() {
+            maxTries = parseInt(this.id);
+            userNumber.disabled = false;
+            answer.innerHTML = ' ';
+            resetGame();
+        });
+    });
 
     if(maxTries === 0){
         answer.innerHTML = 'Alege un numar de incercari!';
         userNumber.disabled = true;
     }
+
+    reset.addEventListener('click', function(){
+
+    });
 
     form.addEventListener('submit', function(e){
 
@@ -60,8 +61,6 @@ var i = 0,
         if(randomNumber === userNumberValue){
             answer.innerText = x;
             userNumber.disabled = true;
-            userTry = 0;
-            userTries = ' ';
         }
 
             tries++;
